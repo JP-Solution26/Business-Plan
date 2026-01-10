@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(주)제이피솔루션 - 투자 유치 사업계획서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+
+    <style>
+      body {
+        font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+          Roboto, sans-serif;
+        background-color: #f8fafc;
+        color: #334155;
+        line-height: 1.6;
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+      }
+
+      .tracking-tight {
+        font-size: 4rem;
+      }
+      .mb-3 {
+        font-size: 1.5rem;
+      }
+
+      .bg-brand-dark {
+        background-color: #0f172a;
+      }
+
+      /* 차트 애니메이션 */
+      @keyframes growUp {
+        from {
+          height: 0;
+        }
+      }
+      .bar-animate {
+        animation: growUp 1s ease-out forwards;
+      }
+
+      /* 로고 플레이스홀더 */
+      .logo-placeholder {
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+        font-size: 0.8rem;
+        backdrop-filter: blur(4px);
+      }
+
+      /* 이미지 호버 효과 */
+      .zoom-icon {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .group:hover .zoom-icon {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header
+      class="bg-brand-dark text-white relative overflow-hidden h-screen min-h-[600px] flex flex-col justify-center"
+    >
+      <div class="absolute top-8 left-8 z-50">
+        <div class="logo-placeholder"></div>
+      </div>
+
+      <div
+        class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-slate-900 to-transparent z-10"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-20 text-center">
+        <div
+          class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-slate-800 border border-slate-700 text-blue-400 font-semibold mb-10"
+        >
+          <span
+            class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"
+          ></span>
+          2026 Investment Proposal
+        </div>
+
+        <h1 class="font-bold mb-10 tracking-tight">
+          데이터로 제조의 한계를 넘다.<br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200"
+          >
+            창호 유통의 표준, (주)제이피솔루션
+          </span>
+        </h1>
+
+        <p
+          class="text-slate-300 max-w-4xl mx-auto text-xl md:text-2xl font-light leading-relaxed"
+        >
+          22만 팬덤의 신뢰 자산과 독보적인 디지털 마케팅 엔진을 결합하여<br
+            class="hidden md:block"
+          />
+          제조 파트너에게 <strong>'가동률 100% 확정 매출'</strong>을 공급하는<br />
+          테크 기반 유통 플랫폼입니다.
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-slate-500 animate-bounce"
+      >
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 py-24 relative z-30">
+      <div
+        class="bg-white rounded-3xl shadow-2xl border border-slate-200 p-10 md:p-14"
+      >
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 border-b border-slate-100 pb-6"
+        >
+          <h2 class="font-bold text-slate-900">2025 Financial Highlights</h2>
+          <span
+            class="mt-2 md:mt-0 text-base text-slate-500 bg-slate-100 px-4 py-1.5 rounded-full font-medium"
+          >
+            2025.01.01 ~ 2025.12.31 기준
+          </span>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16"
+        >
+          <div class="relative pl-6 border-l-4 border-blue-500">
+            <p class="text-slate-500 font-bold uppercase tracking-wider mb-2">
+              총 계약 매출액
+            </p>
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-5xl font-extrabold text-slate-900 tracking-tight"
+                >165.6</span
+              >
+              <span class="text-xl text-slate-600 font-bold">억 원</span>
+            </div>
+            <p
+              class="text-sm text-blue-600 mt-3 font-bold bg-blue-50 inline-block px-2 py-1 rounded"
+            >
+              YoY Growth 10,000%+
+            </p>
+          </div>
+          <div class="relative pl-6 border-l-4 border-indigo-500">
+            <p class="text-slate-500 font-bold uppercase tracking-wider mb-2">
+              마케팅 효율 (ROAS)
+            </p>
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-5xl font-extrabold text-slate-900 tracking-tight"
+                >852.6</span
+              >
+              <span class="text-xl text-slate-600 font-bold">%</span>
+            </div>
+            <p class="text-sm text-slate-500 mt-3">
+              마케팅비 19억 투입 대비 성과
+            </p>
+          </div>
+          <div class="relative pl-6 border-l-4 border-emerald-500">
+            <p class="text-slate-500 font-bold uppercase tracking-wider mb-2">
+              평균 계약 전환율
+            </p>
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-5xl font-extrabold text-slate-900 tracking-tight"
+                >21.0</span
+              >
+              <span class="text-xl text-slate-600 font-bold">%</span>
+            </div>
+            <p class="text-sm text-slate-500 mt-3">
+              상담 17,194건 / 계약 1,635건
+            </p>
+          </div>
+          <div class="relative pl-6 border-l-4 border-orange-500">
+            <p class="text-slate-500 font-bold uppercase tracking-wider mb-2">
+              객단가 (ARPU)
+            </p>
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-5xl font-extrabold text-slate-900 tracking-tight"
+                >1,012</span
+              >
+              <span class="text-xl text-slate-600 font-bold">만 원</span>
+            </div>
+            <p class="text-sm text-slate-500 mt-3">고부가가치 시장 점유</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mb-40">
+      <div class="grid lg:grid-cols-12 gap-16 items-end">
+        <div class="lg:col-span-5">
+          <h3
+            class="text-blue-600 font-bold text-base tracking-wide mb-3 uppercase"
+          >
+            Proven Track Record
+          </h3>
+          <h2 class="font-bold text-slate-900 mb-8 leading-tight">
+            비수기에 증명된<br />위기 관리 시스템
+          </h2>
+          <p class="text-slate-600 mb-10 text-xl leading-relaxed">
+            통상적인 8월 비수기에 경쟁사가 마케팅을 축소할 때, 데이터 확신을
+            바탕으로 <strong>1.5억 원의 공격적 투자</strong>를 집행했습니다.
+            <br /><br />
+            그 결과,
+            <span class="text-blue-700 font-bold bg-blue-50 px-2"
+              >9월 매출 27.8억 원(전월 대비 2.2배)</span
+            >이라는 폭발적 성장을 이끌어내며 시장 지배력을 입증했습니다.
+          </p>
+          <div class="bg-slate-100 rounded-xl p-6 border border-slate-200">
+            <div class="flex items-center gap-3 mb-2">
+              <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+              <p class="text-slate-800 font-bold text-lg">월 매출 성장 추이</p>
+            </div>
+            <p class="text-base text-slate-500">
+              1월 2,900만원 &rarr; 11월 29.7억원 (약 100배 성장)
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="lg:col-span-7 bg-white p-10 rounded-3xl shadow-xl border border-slate-100"
+        >
+          <div
+            class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4"
+          >
+            <h4 class="font-bold text-2xl text-slate-800">
+              2025년 월별 매출 성장 추이
+            </h4>
+            <div class="flex gap-6 text-sm">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 bg-blue-100 rounded-sm"></span>평년 성장
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 bg-blue-600 rounded-sm"></span>전략적 폭발
+                구간
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-end gap-4 h-80">
+            <div
+              class="flex flex-col justify-between h-full text-sm text-slate-400 font-bold text-right pb-8 w-12 shrink-0"
+            >
+              <span>30억</span>
+              <span>20억</span>
+              <span>10억</span>
+              <span>0</span>
+            </div>
+
+            <div
+              class="relative w-full h-full flex items-end justify-between gap-3 px-2 border-l border-b border-slate-200"
+            >
+              <div
+                class="absolute inset-0 flex flex-col justify-between pointer-events-none z-0 pb-8 pl-2"
+              >
+                <div
+                  class="w-full h-px bg-slate-100 border-t border-dashed border-slate-200"
+                ></div>
+                <div
+                  class="w-full h-px bg-slate-100 border-t border-dashed border-slate-200"
+                ></div>
+                <div
+                  class="w-full h-px bg-slate-100 border-t border-dashed border-slate-200"
+                ></div>
+                <div></div>
+              </div>
+
+              <div
+                class="w-full bg-blue-100 rounded-t relative z-10 h-[1%]"
+              ></div>
+              <div
+                class="w-full bg-blue-100 rounded-t relative z-10 h-[2%]"
+              ></div>
+              <div
+                class="w-full bg-blue-100 rounded-t relative z-10 h-[23%]"
+              ></div>
+              <div
+                class="w-full bg-blue-200 rounded-t relative z-10 h-[43%]"
+              ></div>
+              <div
+                class="w-full bg-blue-200 rounded-t relative z-10 h-[48%]"
+              ></div>
+              <div
+                class="w-full bg-blue-200 rounded-t relative z-10 h-[44%]"
+              ></div>
+              <div
+                class="w-full bg-blue-200 rounded-t relative z-10 h-[34%]"
+              ></div>
+
+              <div
+                class="w-full bg-indigo-400 rounded-t relative z-10 h-[41%] group cursor-pointer"
+              >
+                <div
+                  class="absolute -top-12 left-1/2 -translate-x-1/2 bg-indigo-900 text-white text-xs px-3 py-1.5 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap z-20"
+                >
+                  8월: 전략적 투자
+                </div>
+              </div>
+
+              <div
+                class="w-full bg-blue-600 rounded-t relative z-10 h-[92%] bar-animate"
+              >
+                <div
+                  class="absolute -top-10 left-1/2 -translate-x-1/2 text-blue-700 font-bold text-sm"
+                >
+                  27.8억
+                </div>
+              </div>
+              <div
+                class="w-full bg-blue-600 rounded-t relative z-10 h-[99%] bar-animate"
+              >
+                <div
+                  class="absolute -top-10 left-1/2 -translate-x-1/2 text-blue-700 font-bold text-sm"
+                >
+                  29.7억
+                </div>
+              </div>
+              <div
+                class="w-full bg-blue-500 rounded-t relative z-10 h-[84%]"
+              ></div>
+              <div
+                class="w-full bg-blue-500 rounded-t relative z-10 h-[32%]"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-between text-sm text-slate-400 mt-4 font-medium pl-16"
+          >
+            <span>1월</span><span>2월</span><span>3월</span><span>4월</span
+            ><span>5월</span><span>6월</span> <span>7월</span
+            ><span class="text-indigo-600 font-bold">8월</span
+            ><span class="text-blue-700 font-bold">9월</span
+            ><span class="text-blue-700 font-bold">10월</span><span>11월</span
+            ><span>12월</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-24 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <h3
+            class="text-blue-600 font-bold text-base tracking-wide mb-3 uppercase"
+          >
+            Core Strategy
+          </h3>
+          <h2 class="font-bold text-slate-900 mb-6">
+            빈틈없는 타겟팅 채널 믹스
+          </h2>
+          <p class="text-slate-600 max-w-3xl mx-auto text-xl">
+            단일 채널에 의존하지 않습니다. 고객의 구매 여정(Journey) 전반을
+            장악하는<br />
+            옴니채널 전략으로 경쟁사가 따라올 수 없는 '디지털 영토'를
+            구축했습니다.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
+            onclick="openModal('img/image 25.png')"
+          >
+            <div class="h-48 w-full bg-slate-200 relative">
+              <img
+                src="img/image 11.png"
+                alt="유튜브 운영 사례"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center zoom-icon"
+              >
+                <i class="fas fa-search-plus text-white text-3xl"></i>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                <h4 class="text-xl font-bold text-slate-800">YouTube</h4>
+              </div>
+              <p class="text-base text-slate-500 font-medium mb-6">
+                영상 컨텐츠 & 브랜딩
+              </p>
+              <ul
+                class="text-base text-slate-600 space-y-3 pt-4 border-t border-slate-100"
+              >
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-500 mt-1.5 mr-3 text-sm"></i
+                  >시공 사례 영상화
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-500 mt-1.5 mr-3 text-sm"></i
+                  >신뢰도 구축 (팬덤)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
+            onclick="openModal('img/image 19.png')"
+          >
+            <div class="h-48 w-full bg-slate-200 relative">
+              <img
+                src="img/image 6.png"
+                alt="네이버 운영 사례"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center zoom-icon"
+              >
+                <i class="fas fa-search-plus text-white text-3xl"></i>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-green-500 text-3xl font-black">N</span>
+                <h4 class="text-xl font-bold text-slate-800">Naver</h4>
+              </div>
+              <p class="text-base text-slate-500 font-medium mb-6">
+                검색 장악 & 상위노출
+              </p>
+              <ul
+                class="text-base text-slate-600 space-y-3 pt-4 border-t border-slate-100"
+              >
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1.5 mr-3 text-sm"></i
+                  >키워드 검색 광고 점유
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1.5 mr-3 text-sm"></i
+                  >브랜드 블로그 운영
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
+            onclick="openModal('img/image 22.png')"
+          >
+            <div class="h-48 w-full bg-slate-200 relative">
+              <img
+                src="img/meta2.png"
+                alt="메타 광고 사례"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center zoom-icon"
+              >
+                <i class="fas fa-search-plus text-white text-3xl"></i>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <i class="fab fa-meta text-blue-600 text-3xl"></i>
+                <h4 class="text-xl font-bold text-slate-800">Meta</h4>
+              </div>
+              <p class="text-base text-slate-500 font-medium mb-6">
+                정밀 타겟팅 & 리타겟팅
+              </p>
+              <ul
+                class="text-base text-slate-600 space-y-3 pt-4 border-t border-slate-100"
+              >
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-500 mt-1.5 mr-3 text-sm"></i
+                  >관심사 기반 타겟 광고
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-500 mt-1.5 mr-3 text-sm"></i
+                  >인스타그램 릴스 활용
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
+            onclick="openModal('img/image 20.png')"
+          >
+            <div class="h-48 w-full bg-slate-200 relative">
+              <img
+                src="img/flvmffpt.png"
+                alt="오프라인 홍보 사례"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center zoom-icon"
+              >
+                <i class="fas fa-search-plus text-white text-3xl"></i>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <i class="fas fa-map-marked-alt text-slate-600 text-3xl"></i>
+                <h4 class="text-xl font-bold text-slate-800">Offline</h4>
+              </div>
+              <p class="text-base text-slate-500 font-medium mb-6">
+                지역 거점 & 생활 밀착
+              </p>
+              <ul
+                class="text-base text-slate-600 space-y-3 pt-4 border-t border-slate-100"
+              >
+                <li class="flex items-start">
+                  <i class="fas fa-check text-slate-500 mt-1.5 mr-3 text-sm"></i
+                  >아파트 단지 홍보
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-slate-500 mt-1.5 mr-3 text-sm"></i
+                  >지역 신뢰도 강화
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32 py-12">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div>
+          <h3
+            class="text-blue-600 font-bold text-base tracking-wide mb-3 uppercase"
+          >
+            Business Competitiveness
+          </h3>
+          <h2 class="font-bold text-slate-900 mb-8">
+            개인이 아닌<br />'시스템'으로 승리합니다
+          </h2>
+          <p class="text-slate-600 mb-10 text-xl leading-relaxed">
+            특정 개인의 영업력에 의존하는 구조는 확장할 수 없습니다. <br />
+            (주)제이피솔루션은 경영, 마케팅, 시공, 물류, CS 등 5대 영역을 완벽히
+            분업화하고 디지털화하여 <strong>표준 업무 매뉴얼(SOP)</strong>을
+            완성했습니다.
+          </p>
+          <div class="space-y-6">
+            <div
+              class="flex items-start gap-5 p-6 rounded-xl bg-slate-50 border border-slate-100"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-blue-500 text-2xl"
+              >
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 text-lg mb-1">
+                  프로세스 자동화
+                </h4>
+                <p class="text-slate-500">인적 리스크 0%, 업무 효율 극대화</p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-5 p-6 rounded-xl bg-slate-50 border border-slate-100"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-blue-500 text-2xl"
+              >
+                <i class="fas fa-handshake-simple"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 text-lg mb-1">
+                  대기업 파트너십 (신뢰)
+                </h4>
+                <p class="text-slate-500">
+                  LX 하우시스 등 메이저 브랜드 매출 비중 66.5%
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative mt-10 lg:mt-0">
+          <div
+            class="absolute -inset-4 bg-gradient-to-r from-blue-100 to-slate-100 rounded-3xl transform rotate-3 opacity-50 z-0"
+          ></div>
+          <div
+            class="bg-white relative z-10 rounded-3xl shadow-xl p-10 border border-slate-100"
+          >
+            <h4 class="font-bold text-center mb-8 text-slate-800 text-xl">
+              제이피솔루션 Growth Funnel
+            </h4>
+            <div class="space-y-3">
+              <div
+                class="bg-slate-800 text-white p-5 rounded-lg text-center relative shadow-md mx-auto w-full"
+              >
+                <p class="text-sm opacity-70 mb-1">Impression</p>
+                <p class="font-bold text-lg">22만 팬덤 & 채널 장악</p>
+              </div>
+              <div
+                class="bg-blue-700 text-white p-5 rounded-lg text-center relative shadow-md mx-auto w-[90%]"
+              >
+                <p class="text-sm opacity-70 mb-1">Consultation</p>
+                <p class="font-bold text-lg">상담 17,194건</p>
+              </div>
+              <div
+                class="bg-blue-600 text-white p-5 rounded-lg text-center relative shadow-md mx-auto w-[80%]"
+              >
+                <p class="text-sm opacity-70 mb-1">Conversion</p>
+                <p class="font-bold text-lg">계약 1,635건</p>
+              </div>
+              <div
+                class="bg-blue-500 text-white p-5 rounded-lg text-center relative shadow-md mx-auto w-[70%]"
+              >
+                <p class="text-sm opacity-70 mb-1">Revenue</p>
+                <p class="font-bold text-2xl">165.6억 원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-900 py-32 text-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="font-bold mb-6">Investment & Synergy</h2>
+          <p class="text-slate-400 max-w-3xl mx-auto text-xl">
+            이미 165억 원의 실적으로 시스템의 가치는 증명되었습니다.<br />
+            더 큰 규모의 경제를 실현할 최적의 파트너를 찾습니다.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div
+            class="bg-slate-800 p-12 rounded-3xl border border-slate-700 hover:border-blue-500 transition group"
+          >
+            <div
+              class="w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-500 text-4xl mb-8 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-6">Financial Investor</h3>
+            <p class="text-slate-400 mb-8 text-lg min-h-[60px]">
+              검증된 수익 엔진에 자본을 투입하여<br />1년 내 연 매출 1,000억
+              원대로 확장합니다.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center text-base text-slate-300">
+                <i class="fas fa-check-circle text-blue-500 mr-4 text-xl"></i
+                >시장 점유율(M/S) 1위 공고화
+              </div>
+              <div class="flex items-center text-base text-slate-300">
+                <i class="fas fa-check-circle text-blue-500 mr-4 text-xl"></i>PB
+                브랜드 런칭 및 마진 개선
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-slate-800 p-12 rounded-3xl border border-slate-700 hover:border-blue-500 transition group"
+          >
+            <div
+              class="w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-500 text-4xl mb-8 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-city"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-6">Strategic Partner</h3>
+            <p class="text-slate-400 mb-8 text-lg min-h-[60px]">
+              가동률 100%를 보장하는 '매출 엔진'과<br />디지털 운영 시스템을
+              이식해 드립니다.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center text-base text-slate-300">
+                <i class="fas fa-check-circle text-blue-500 mr-4 text-xl"></i
+                >안정적 물량 공급 (Risk Hedge)
+              </div>
+              <div class="flex items-center text-base text-slate-300">
+                <i class="fas fa-check-circle text-blue-500 mr-4 text-xl"></i
+                >2세 경영 승계를 위한 디지털화
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-950 py-16 border-t border-slate-900 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-10">
+          대한민국 1등 창호 플랫폼의 여정에 함께하십시오.
+        </h2>
+        <div
+          class="mt-20 pt-10 border-t border-slate-900 text-sm text-slate-600"
+        >
+          <p class="mb-3">(주)제이피솔루션 | 대표이사: 정지훈</p>
+          <p>&copy; 2026 JP Solution Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="imageModal"
+      class="fixed inset-0 z-[100] hidden"
+      onclick="closeModal()"
+    >
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+      <div
+        class="relative z-10 w-full h-full flex items-center justify-center p-4"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-8 right-8 text-white text-4xl hover:text-gray-300 transition"
+        >
+          &times;
+        </button>
+        <img
+          id="modalImg"
+          src=""
+          alt="Expanded View"
+          class="max-w-full max-h-[90vh] rounded-lg shadow-2xl animate-[growUp_0.3s_ease-out]"
+        />
+      </div>
+    </div>
+
+    <script>
+      // 모달 열기 함수
+      function openModal(imgSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        // 실제 이미지 파일이 준비되면 아래와 같이 분기 처리가 필요할 수 있습니다.
+        // 지금은 placeholder 이미지 URL을 그대로 사용합니다.
+        modalImg.src = imgSrc;
+
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // 스크롤 방지
+      }
+
+      // 모달 닫기 함수
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto"; // 스크롤 복구
+      }
+
+      // ESC 키로 모달 닫기
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -56,7 +56,6 @@
 
       /* 로고 플레이스홀더 */
       .logo-placeholder {
-        border: 2px dashed rgba(255, 255, 255, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -64,6 +63,8 @@
         font-weight: bold;
         font-size: 0.8rem;
         backdrop-filter: blur(4px);
+        width: 160px;
+        height: 48px;
       }
 
       /* 이미지 호버 효과 */
@@ -81,7 +82,9 @@
       class="bg-brand-dark text-white relative overflow-hidden h-screen min-h-[600px] flex flex-col justify-center"
     >
       <div class="absolute top-8 left-8 z-50">
-        <div class="logo-placeholder"></div>
+        <div class="logo-placeholder">
+          <img src="img/JPsolution_logo2.png" alt="" />
+        </div>
       </div>
 
       <div
@@ -195,7 +198,7 @@
           </div>
           <div class="relative pl-6 border-l-4 border-orange-500">
             <p class="text-slate-500 font-bold uppercase tracking-wider mb-2">
-              객단가 (ARPU)
+              평균계약금액
             </p>
             <div class="flex items-baseline gap-1">
               <span
@@ -219,24 +222,42 @@
             Proven Track Record
           </h3>
           <h2 class="font-bold text-slate-900 mb-8 leading-tight">
-            비수기에 증명된<br />위기 관리 시스템
+            1년 내 연 매출<br />200억 달성 역량
           </h2>
-          <p class="text-slate-600 mb-10 text-xl leading-relaxed">
-            통상적인 8월 비수기에 경쟁사가 마케팅을 축소할 때, 데이터 확신을
-            바탕으로 <strong>1.5억 원의 공격적 투자</strong>를 집행했습니다.
-            <br /><br />
-            그 결과,
-            <span class="text-blue-700 font-bold bg-blue-50 px-2"
-              >9월 매출 27.8억 원(전월 대비 2.2배)</span
-            >이라는 폭발적 성장을 이끌어내며 시장 지배력을 입증했습니다.
+          <p class="text-slate-600 mb-8 text-xl leading-relaxed">
+            통상적인 8월 비수기에 1.5억 원의 공격적 투자를 집행하여
+            <span class="font-bold text-blue-700">9월 매출 27.8억 원</span>을
+            달성했습니다. <br />단순한 물량 공세가 아닌, 데이터 확신을 바탕으로
+            한 위기 관리 시스템의 승리입니다.
           </p>
-          <div class="bg-slate-100 rounded-xl p-6 border border-slate-200">
-            <div class="flex items-center gap-3 mb-2">
-              <i class="fas fa-chart-line text-blue-600 text-xl"></i>
-              <p class="text-slate-800 font-bold text-lg">월 매출 성장 추이</p>
+
+          <div
+            class="bg-indigo-50 rounded-xl p-6 border border-indigo-100 shadow-sm"
+          >
+            <div class="flex items-center gap-2 mb-3">
+              <span
+                class="bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded"
+                >Branding Success</span
+              >
             </div>
-            <p class="text-base text-slate-500">
-              1월 2,900만원 &rarr; 11월 29.7억원 (약 100배 성장)
+            <h4 class="text-slate-800 font-bold text-lg mb-2">
+              "3군 중소기업 제품의 기적"
+            </h4>
+            <p class="text-base text-slate-600 mb-3">
+              중소기업(청암) 제품을 <strong>'홈윈도우'로 리브랜딩</strong>하여
+              성공적으로 런칭했습니다.
+            </p>
+            <div
+              class="flex items-center gap-3 pt-3 border-t border-indigo-200"
+            >
+              <div class="text-3xl font-extrabold text-indigo-600">45%</div>
+              <div class="text-sm text-slate-600 leading-tight">
+                전체 매출 중<br /><strong>판매 비중 달성</strong>
+              </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">
+              *대기업 제품보다 판매가 어려운 중소기업 제품으로 이뤄낸
+              성과입니다.
             </p>
           </div>
         </div>
@@ -423,7 +444,7 @@
 
           <div
             class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
-            onclick="openModal('img/image 19.png')"
+            onclick="openModal('img/image 42.png')"
           >
             <div class="h-48 w-full bg-slate-200 relative">
               <img
@@ -462,7 +483,7 @@
 
           <div
             class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer"
-            onclick="openModal('img/image 22.png')"
+            onclick="openModal('img/image 53.png')"
           >
             <div class="h-48 w-full bg-slate-200 relative">
               <img
@@ -553,7 +574,8 @@
             개인이 아닌<br />'시스템'으로 승리합니다
           </h2>
           <p class="text-slate-600 mb-10 text-xl leading-relaxed">
-            특정 개인의 영업력에 의존하는 구조는 확장할 수 없습니다. <br />
+            특정 개인의 영업력에 의존하면
+            <strong>경영권 승계 시 리스크</strong>가 큽니다. <br />
             (주)제이피솔루션은 경영, 마케팅, 시공, 물류, CS 등 5대 영역을 완벽히
             분업화하고 디지털화하여 <strong>표준 업무 매뉴얼(SOP)</strong>을
             완성했습니다.
@@ -587,7 +609,7 @@
                   대기업 파트너십 (신뢰)
                 </h4>
                 <p class="text-slate-500">
-                  LX 하우시스 등 메이저 브랜드 매출 비중 66.5%
+                  LX 하우시스 등 메이저 브랜드와 전략적 제휴
                 </p>
               </div>
             </div>
@@ -690,7 +712,7 @@
               </div>
               <div class="flex items-center text-base text-slate-300">
                 <i class="fas fa-check-circle text-blue-500 mr-4 text-xl"></i
-                >2세 경영 승계를 위한 디지털화
+                ><strong>경영 승계 시 시스템에 의한 안정적인 운영 가능</strong>
               </div>
             </div>
           </div>
@@ -767,5 +789,3 @@
     </script>
   </body>
 </html>
-
-

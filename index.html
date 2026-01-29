@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(주)제이피솔루션 - 투자 유치 사업계획서</title>
+    <title>(주)제이피솔루션 - 사업계획서</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -75,6 +75,18 @@
       .group:hover .zoom-icon {
         opacity: 1;
       }
+
+      /* 소개서 모달 스크롤바 커스텀 */
+.intro-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.intro-modal-content::-webkit-scrollbar-thumb {
+    background-color: #475569;
+    border-radius: 4px;
+}
+.intro-modal-content::-webkit-scrollbar-track {
+    background-color: #1e293b;
+}
     </style>
   </head>
   <body class="antialiased">
@@ -122,6 +134,16 @@
           제조 파트너에게 <strong>'가동률 100% 확정 매출'</strong>을 공급하는<br />
           테크 기반 유통 플랫폼입니다.
         </p>
+        
+        <button 
+    onclick="openIntroModal()"
+    class="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm rounded-full transition-all duration-300 text-white font-bold text-lg group mt-8"
+>
+    <i class="fas fa-user-tie text-blue-400 group-hover:text-white transition"></i>
+    <span>정프로 소개서 보기</span>
+    <i class="fas fa-arrow-right text-sm opacity-70 group-hover:translate-x-1 transition-transform"></i>
+</button>
+        
       </div>
 
       <div
@@ -759,34 +781,91 @@
       </div>
     </div>
 
+    <div id="introModal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal('introModal')"></div>
+    
+    <button onclick="closeModal('introModal')" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 transition z-50">&times;</button>
+
+    <div class="relative z-10 w-full h-full flex justify-center py-10 pointer-events-none">
+        <div class="intro-modal-content w-full max-w-4xl h-full overflow-y-auto px-4 pointer-events-auto rounded-xl">
+            
+            <div class="bg-slate-800 text-white p-4 mb-4 rounded-lg text-center shadow-lg">
+                <p class="font-bold">정프로 소개서 (JUNG PRO Portfolio)</p>
+                <p class="text-xs text-gray-400 mt-1">스크롤하여 전체 내용을 확인하세요.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/1.png" class="w-full h-full object-cover" alt="Slide 1">
+                </div>
+                <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/2.png" class="w-full h-full object-cover" alt="Slide 2">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/3.png" class="w-full h-full object-cover" alt="Slide 3">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/4.png" class="w-full h-full object-cover" alt="Slide 4">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/5.png" class="w-full h-full object-cover" alt="Slide 5">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/6.png" class="w-full h-full object-cover" alt="Slide 6">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/7.png" class="w-full h-full object-cover" alt="Slide 7">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/8.png" class="w-full h-full object-cover" alt="Slide 8">
+                </div>
+                              <div class="w-full aspect-[16/9] bg-white rounded-lg shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img src="img/9.png" class="w-full h-full object-cover" alt="Slide 9">
+                </div>
+                </div>
+
+            <div class="mt-10 mb-20 text-center">
+                <button onclick="closeModal('introModal')" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold shadow-lg transition">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script>
-      // 모달 열기 함수
-      function openModal(imgSrc) {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImg");
+// [수정됨] 모달 관련 스크립트 전체 교체
+function openModal(imgSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modalImg.src = imgSrc;
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; 
+}
 
-        // 실제 이미지 파일이 준비되면 아래와 같이 분기 처리가 필요할 수 있습니다.
-        // 지금은 placeholder 이미지 URL을 그대로 사용합니다.
-        modalImg.src = imgSrc;
+// [추가됨] 소개서 모달 열기 함수
+function openIntroModal() {
+    const modal = document.getElementById("introModal");
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+}
 
-        modal.classList.remove("hidden");
-        document.body.style.overflow = "hidden"; // 스크롤 방지
-      }
+// [수정됨] 모달 닫기 함수 (ID를 받아서 처리하도록 변경)
+function closeModal(modalId) {
+    // modalId가 없으면 기본값으로 'imageModal' 처리 (기존 코드 호환성)
+    const id = modalId || 'imageModal'; 
+    const modal = document.getElementById(id);
+    if(modal) modal.classList.add("hidden");
+    document.body.style.overflow = "auto"; 
+}
 
-      // 모달 닫기 함수
-      function closeModal() {
-        const modal = document.getElementById("imageModal");
-        modal.classList.add("hidden");
-        document.body.style.overflow = "auto"; // 스크롤 복구
-      }
-
-      // ESC 키로 모달 닫기
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          closeModal();
-        }
-      });
+// [수정됨] ESC 키 이벤트 (두 모달 모두 닫기)
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeModal("imageModal");
+        closeModal("introModal");
+    }
+});
     </script>
   </body>
 </html>
+
 
